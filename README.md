@@ -210,7 +210,9 @@ LimaCharlie:
 
 
 # Conclusion
+This project is able to combine an EDR and SOAR platform to automate the detection of a mailicious program. When LaZagne ran to retrieve passwords from the endpoint, a report was created because the event matched the EDR's rules. Now, with the SOAR platform connected with the EDR, it's able to mirror the event and send out the alert to our two communication channels: email and Slack. The user will see the alert and will able to decide on whether to isolate the endpoint or not. An isolated endpoint can no longer be reachable. After every prompt, it will send a updated reply of the situation. 
 
+A diagram is really beneficial when creating your SOAR playbook because it helps visualize where the data is coming from. You will know it's start and it's intended destination. Having events is both a necessity and a hindirance. You will need events so you can simulate the whole playbook; certain sections can be validated. On the otherhand, having a lot of events is a hindirance because you can't focus on what's important. Therefore, I removed some of the sensors which greatly decreased my number of events.
 
 
 
