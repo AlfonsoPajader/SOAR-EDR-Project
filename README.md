@@ -48,11 +48,14 @@ Used a Windows VM to perform all the tasks. Did not use my personal computer.
 
 ## LimaCharlie (Detect & Response Rule)
 3. Use the Timeline to find events to help create your rule. Look at exisiting rule and modify/build on it. Helps you with the format and field names.
+
 <img width="1510" alt="Screenshot 2024-07-21 at 6 03 09 PM" src="https://github.com/user-attachments/assets/5fdedd29-2ced-4e2a-9b63-26033887d0d2">
+
 4. Create the D&R Rule. If event detection hits criteria it will create a detection report.
 Tip: search credential -> process creation -> copy raw and paste to new rule -> separate detect and respond
 <img width="839" alt="Screenshot 2024-07-21 at 6 08 22 PM" src="https://github.com/user-attachments/assets/22145aba-4b32-4298-b7b1-abdd63614172">
-### detect
+
+detect
 ```
   events:
   - NEW_PROCESS
@@ -78,9 +81,10 @@ Tip: search credential -> process creation -> copy raw and paste to new rule -> 
       op: is
       path: event/HASH
       value: '3cc5ee93a9ba1fc57389705283b760c8bd61f35e9398bbfa3210e2becf6d4b05'
-
 ```
-### respond
+
+respond
+
 ```
 - action: report
   metadata:
@@ -92,7 +96,6 @@ Tip: search credential -> process creation -> copy raw and paste to new rule -> 
     tags:
     - attack.credential_access
   name: MyDFIR - HackTool - Lazagne (SOAR-EDR
-
 ```
 
 5. Bottom of the screen click on "Target Event" and paste the given event from the timeline -> "Test Event." Also, check on LimaCharlie Detections to verify of event.
@@ -172,7 +175,7 @@ Title: <<retrieve_detections.body.cat>>
 10. Access Management -> REST API -> copy Org JWT key to add limacharlie api to credentials
 <img width="508" alt="Screenshot 2024-07-22 at 10 06 50 PM" src="https://github.com/user-attachments/assets/f65608c9-1ed7-4f9d-895e-280d6855298f">
 11. Go back to story and add credential
-*this will allow LimaCharlie to work with the triggers**
+this will allow LimaCharlie to work with the triggers
 
 ### Triggers 
 12. Add Triggers. For Yes and No (yes=true, no=false)
@@ -190,8 +193,6 @@ YES: ![image](https://github.com/user-attachments/assets/45aadfe2-e6db-4f18-bcc7
 
 
 
-
-
 # Running the whole process
 <img width="555" alt="Screenshot 2024-07-23 at 10 39 08 AM" src="https://github.com/user-attachments/assets/5d589da2-6382-4f11-9e9f-23ebdf1aed2d">
 
@@ -200,8 +201,10 @@ YES: ![image](https://github.com/user-attachments/assets/45aadfe2-e6db-4f18-bcc7
 2. Email receives alert
 <img width="1181" alt="Screenshot 2024-07-22 at 10 24 01 PM" src="https://github.com/user-attachments/assets/e19c280b-8ef3-4675-96b0-8dc5db9e3b8b">
 3. User click on visit Page, and decides to isolate machine. After isolation, it just disconnected me from Microsoft Remote Desktop. Usually, it will stop allowing the endpoint from pinging to different destinations.
+
 Slack:
 <img width="1093" alt="Screenshot 2024-07-22 at 10 24 49 PM" src="https://github.com/user-attachments/assets/50b8f9cc-3747-4487-9599-013e713d1a97">
+
 LimaCharlie:
 <img width="474" alt="Screenshot 2024-07-22 at 10 25 15 PM" src="https://github.com/user-attachments/assets/efe79e50-7e01-460f-9242-97b5763daf1b">
 
