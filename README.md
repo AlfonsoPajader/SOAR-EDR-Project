@@ -5,7 +5,7 @@ A virtual machine will be used as the endpoint to run LaZagne. LimaCharlie will 
 - LaZagne: program that retrieves passwords. 
 - LimaCharlie: EDR (Endpoint Detection & Response) platform. Detect mailicous events and isolate machines
 - Slack: Communications. receive alerts of the events
-- Tine: SOAR (Security, Orchestration, Automation, Response) platform. Automate the workflow
+- Tines: SOAR (Security, Orchestration, Automation, Response) platform. Automate the workflow
 
 # Diagram
 Here is a diagram of what the playbook will showcase. It follows the objective and how the event flows throughout the whole process. The diagram is made in draw.io.
@@ -141,7 +141,8 @@ In Tines story -> tools -> page -> drag it to the board
 ### Page
 8. Add page to storyboard -> edit page - body detection information below 
 <img width="392" alt="Screenshot 2024-07-23 at 10 47 12 AM" src="https://github.com/user-attachments/assets/f22a4569-b46c-4f7d-be56-04ace66a3c73">
-#### detection - properties (fields were interested in)
+
+#### detection - properties (fields we're interested in)
 Title: <<retrieve_detections.body.cat>> 
 Time: <retrieve_detections.body.detect.routing.event_time>>
 Computer: <<retrieve_detections.body.detect.routing.hostname>>
