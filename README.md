@@ -1,7 +1,7 @@
 # SOAR-EDR-Project
 
 # Objective
-A virtual machine will be used as the environment to run LaZagne. LimaCharlie will detect the event and send out its details to Slack and email. Additionally, the user will be given a prompt on whether to isolate the machine or not. 
+A virtual machine will be used as the endpoint to run LaZagne. LimaCharlie will detect the event and send out its details to Slack and email. Additionally, the user will be given a prompt on whether to isolate the machine or not. 
 - LaZagne: program that retrieves passwords. 
 - LimaCharlie: EDR (Endpoint Detection & Response) platform. Detect mailicous events and isolate machines
 - Slack: Communications. receive alerts of the events
@@ -12,9 +12,6 @@ Here is a diagram of what the playbook will showcase. It follows the objective a
 [Link to draw.io diagram in github](https://github.com/AlfonsoPajader/SOAR-EDR-Project/blob/main/SOAR%20EDR.drawio)
 
 ![image](https://github.com/user-attachments/assets/c032a70c-d8d5-48ee-88aa-dc7e73bbfde6)
-
-# PreReq
-Used a Windows VM to perform all the tasks. Did not use my personal computer.
 
 # LimaCharlie Setup
 >Make sure endpoint is connected and relaying events to LimaCharlie
